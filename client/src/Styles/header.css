@@ -1,0 +1,118 @@
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.video-container {
+    position: relative;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    height: 500px;
+}
+
+.video-container video {
+    min-width: 100%; 
+    min-height: 100%; 
+    width: auto;
+    height: auto;
+    position: absolute;
+    top: 105%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+  }
+
+.header-text {
+    margin-top: -11rem;
+    padding: 1rem 2rem;
+    z-index: 1;
+    position: absolute; 
+    line-height: 1.5;
+    height: 90px;
+    overflow: hidden;
+  }
+
+.header-text::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 2px;
+    height: 100%;
+    background: #fff;
+    animation: 0.8s blinkCursor steps(3) infinite;
+}
+
+@keyframes blinkCursor {
+    0%, 75% 
+    {
+        opacity: 1;
+    }
+    76%, 100% 
+    {
+        opacity: 0;
+    }
+}
+
+.header-text h1 {
+    font-weight: 800;
+    font-size: 55px;
+    animation: typing 8s steps(34) infinite;
+    overflow: hidden;
+}
+
+.header-text span {
+    margin-top: 1rem;
+    color: #472D2D;
+}
+
+@keyframes typing {
+    0%, 90%, 100%
+    {
+        width: 0;
+    }
+    30%, 60%
+    {
+        width: 1211.69px;
+    }
+}
+
+.dog_name {
+    position: absolute;
+    z-index: 1;
+    left: 68%;
+    top: 18%;
+    padding: 0.5rem 1.5rem;
+
+    background: rgba(255, 255, 255, 0.25);
+    border-radius: 16px;
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(3px);
+    border: 1px solid rgba(255, 255, 255, 0.29);
+    
+    cursor: pointer;
+    /* transition: all 0.5s ease-in-out; */
+}
+
+.click {
+    position: absolute;
+    z-index: 1;
+    left: 73%;
+    top: 27%;
+    color: #fff;
+}
+
+.dog_name p {
+    font-size: 28px;
+    color: #472D2D;
+}
+
+.dog_name:hover { 
+    box-shadow: 0 2px 8px 1px rgb(64 60 67 / 24%); 
+}
+
+.dog_name span {
+    font-size: 50px;
+}
+

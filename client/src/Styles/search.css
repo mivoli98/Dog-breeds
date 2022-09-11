@@ -1,0 +1,153 @@
+.searchBar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 95vh;
+}
+
+p {
+    margin: 10px;
+    font-size: 18px;
+}
+
+.marquee {
+    height: 400px;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+.track {
+    position: absolute;
+    white-space: nowrap;
+    will-change: transform;
+    animation: marquee 15s linear infinite;
+    width: 180%;
+}
+
+.track:hover {
+    animation-play-state: paused;
+}
+
+@keyframes marquee {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+.maylike-products-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 50px;
+    z-index: 1;
+    position: absolute;
+    margin-top: 18vh;
+    margin-bottom: 18vh;
+}
+
+.select_dog {
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 8px;
+    height: 65px;
+    width: 386px;
+    padding: 20px;
+    display: flex;
+    font-size: 18px;
+    font-weight: 400;
+    cursor: pointer;
+    box-shadow: 0 0 5px rgba(0,0,0,0.1);
+    border: none;
+    color: #472D2D;  
+}
+
+.find-dog {
+    position: absolute;
+    z-index: 1;
+    top: 50%;
+    padding: 2rem 2rem;
+    width: 100%;
+
+    background: rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.29);
+    transition: all 0.5s ease-in-out;
+}
+
+.find-dog:hover {
+    transform: scale(1.1, 1.1);
+    box-shadow: 0 2px 8px 1px rgb(64 60 67 / 24%);
+}
+
+.find-dog h2 {
+    font-size: 40px;
+    color:  #fff;
+    line-height: 1.5;
+    font-weight: 600;
+}
+.find-dog span {
+    color: #472D2D;
+}
+
+.form-select {
+    width: 400px;
+    cursor: pointer;
+    font-size: 25px;
+    margin-bottom: 2em!important;
+    box-shadow: 0 2px 8px 1px rgb(64 60 67 / 24%);
+    border-radius: 16px;
+    margin-top: -4em!important;
+}
+
+.image-wrapper {
+    width: 300px;
+    height: 300px;
+    display: flex;
+    border-radius: 5px;
+    box-shadow: 0 2px 8px 1px rgb(64 60 67 / 24%);
+
+    background: rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.29);
+    transition: all 0.5s ease-in-out;
+    background-size: cover;
+}
+
+.image-wrapper:hover {
+    transform: scale(1.1, 1.1);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.25);
+}
+
+.image-wrapper img {
+    width: 300px;
+    height: 250px;
+    border-radius: 5px;
+    object-fit: cover;
+}
+
+.videoSearch-container {
+     position: relative;
+     top: 0;
+     bottom: 0;
+     width: 100%;
+     height: 500px;
+     overflow: hidden;
+}
+
+.videoSearch-container video {
+    min-width: 100%; 
+    min-height: 100%; 
+    width: auto;
+    height: auto;
+
+    position: absolute;
+    top: 105%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
